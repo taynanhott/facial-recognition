@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
 
-export default nextConfig;
+export default {
+    async redirects() {
+        return [
+            {
+                source: '/',
+                destination: '/todolist',
+                permanent: false, // Define se o redirecionamento é permanente ou temporário
+            },
+        ];
+    },
+};
