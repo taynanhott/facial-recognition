@@ -1,6 +1,9 @@
 "use client"
 
 import { AlertText } from '@/components/Resources/Alert';
+import TabsItem from '@/components/Resources/Tabs/tabs';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import * as faceapi from 'face-api.js';
 import { useEffect, useRef, useState } from 'react';
 
@@ -74,18 +77,21 @@ function App() {
   }
 
   return (
-    <main className="z-10 flex flex-col lg:flex-row md:justify-between gap-14 items-center container max-w-3xl mx-auto">
-      <section className="bg-gray-900 flex flex-col gap-6 flex-1 w-full">
-        <div className="rounded-xl">
+    <main className="z-10 flex flex-col lg:flex-row md:justify-between max-h-max min-h-[445px] items-center container">
+      <div className="bg-gray-900 w-full">
+        <div className="">
           <div className="relative flex items-center justify-center aspect-video w-full">
             <video ref={videoRef} onLoadedMetadata={handleLoadedMetadata} autoPlay />
             <canvas ref={canvasRef} className="absolute" />
           </div>
         </div>
-        <div className="p-4 rounded-xl flex items-center justify-center w-full">
+        <div className="p-4 rounded-xl flex items-center min-h-36 justify-center w-full">
           <AlertText variant={expression} />
         </div>
-      </section>
+      </div>
+      <div className="grid w-full bg-gray-900 max-w-sm items-center">
+        <TabsItem />
+      </div>
     </main>
   );
 }

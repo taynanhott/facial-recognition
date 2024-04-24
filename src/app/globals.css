@@ -126,13 +126,6 @@ input {
 }
 
 @font-face {
-  font-family: 'bungee';
-  src: url('../fonts/Bungee/Bungee-Regular.ttf') format('opentype');
-  font-style: 'normal';
-  font-display: 'swap';
-}
-
-@font-face {
   font-family: 'poppins';
   src: url('../fonts/Poppins/Poppins-Light.ttf') format('opentype');
   font-style: 'normal';
@@ -142,27 +135,6 @@ input {
 @font-face {
   font-family: 'poppins-bold';
   src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('opentype');
-  font-style: 'normal';
-  font-display: 'swap';
-}
-
-@font-face {
-  font-family: 'righteous';
-  src: url('../fonts/Righteous/Righteous-Regular.ttf') format('opentype');
-  font-style: 'normal';
-  font-display: 'swap';
-}
-
-@font-face {
-  font-family: 'silkscreen';
-  src: url('../fonts/Silkscreen/Silkscreen-Regular.ttf') format('opentype');
-  font-style: 'normal';
-  font-display: 'swap';
-}
-
-@font-face {
-  font-family: 'silkscreen-bold';
-  src: url('../fonts/Silkscreen/Silkscreen-Bold.ttf') format('opentype');
   font-style: 'normal';
   font-display: 'swap';
 }

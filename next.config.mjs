@@ -5,7 +5,7 @@ export default {
         return [
             {
                 source: '/',
-                destination: '/todolist',
+                destination: '/reconhecimento',
                 permanent: false, // Define se o redirecionamento é permanente ou temporário
             },
         ];
