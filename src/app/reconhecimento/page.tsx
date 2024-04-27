@@ -75,8 +75,8 @@ function App() {
   }
 
   return (
-    <main className="z-10 flex flex-col lg:flex-row justify-center min-h-[420px] lg:justify-between h-full lg:max-w-4xl items-center container">
-      <div className="bg-gray-900  w-full">
+    <main className="z-10 flex flex-col lg:flex-row justify-center min-h-[345px] lg:min-h-[564px] lg:justify-between h-full lg:max-w-6xl items-center container">
+      <div className="bg-gray-900 min-h-[345px] lg:min-h-[564px] w-full">
         <div className="relative flex items-center justify-center aspect-video">
           <video ref={videoRef} onLoadedMetadata={handleLoadedMetadata} autoPlay />
           <canvas ref={canvasRef} className="absolute" />

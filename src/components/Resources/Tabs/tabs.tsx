@@ -4,11 +4,11 @@ import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { AlertText, Alerta } from "../Alert";
 
-const classCard = 'min-h-[357px]';
+const classCard = 'min-h-[360px] lg:min-h-[499px]';
 
 export default function TabsItem() {
     return (
-        <Tabs defaultValue="humor" className="p-2 w-full min-h-[420px] bg-gray-900 lg:max-w-sm items-center">
+        <Tabs defaultValue="humor" className="p-2 w-full min-h-[360px] lg:min-h-[564px] bg-gray-900 lg:max-w-sm items-center">
             <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="humor">Verifica Humor</TabsTrigger>
                 <TabsTrigger value="foto">Valida Foto</TabsTrigger>
