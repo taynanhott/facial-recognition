@@ -18,13 +18,13 @@ export default function TabsItem() {
                     <CardHeader>
                         <CardTitle>Verifica Humor</CardTitle>
                         <CardDescription>
-                            Faça expressões faciais para que o reconhecimento facial tente reconhece-las.
+                            Faça expressões faciais para que o reconhecimento facial tente reconhece-las. (EM DESENVOLVIMENTO)
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-2">
                         <div className="space-y-1">
                             <Label htmlFor="current">Expressão facial reconhecida</Label>
-                            <Alerta variant={'success'} />
+                            <Alerta variant={''} />
                         </div>
                     </CardContent>
                 </Card>
@@ -34,7 +34,7 @@ export default function TabsItem() {
                     <CardHeader>
                         <CardTitle>Valida foto</CardTitle>
                         <CardDescription>
-                            Selecione uma foto para que o reconhecimento facial valide se a pessoa é ou não pessoa em questão.
+                            Selecione uma foto para que o reconhecimento facial valide se a pessoa é ou não pessoa em questão. (EM DESENVOLVIMENTO)
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-2">
@@ -44,7 +44,7 @@ export default function TabsItem() {
                         </div>
                         <div className="space-y-1">
                             <Label htmlFor="current">Rosto reconhecido é igual ao da foto anexada?</Label>
-                            <Alerta variant={'success'} />
+                            <Alerta variant={''} />
                         </div>
                     </CardContent>
                 </Card>
