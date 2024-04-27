@@ -2,8 +2,6 @@
 
 import { AlertText } from '@/components/Resources/Alert';
 import TabsItem from '@/components/Resources/Tabs/tabs';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import * as faceapi from 'face-api.js';
 import { useEffect, useRef, useState } from 'react';
 
@@ -77,21 +75,17 @@ function App() {
   }
 
   return (
-    <main className="z-10 flex flex-col lg:flex-row md:justify-between max-h-max min-h-[445px] items-center container">
-      <div className="bg-gray-900 w-full">
-        <div className="">
-          <div className="relative flex items-center justify-center aspect-video w-full">
-            <video ref={videoRef} onLoadedMetadata={handleLoadedMetadata} autoPlay />
-            <canvas ref={canvasRef} className="absolute" />
-          </div>
+    <main className="z-10 flex flex-col lg:flex-row justify-center min-h-[420px] lg:justify-between h-full lg:max-w-4xl items-center container">
+      <div className="bg-gray-900  w-full">
+        <div className="relative flex items-center justify-center aspect-video">
+          <video ref={videoRef} onLoadedMetadata={handleLoadedMetadata} autoPlay />
+          <canvas ref={canvasRef} className="absolute" />
         </div>
-        <div className="p-4 rounded-xl flex items-center min-h-36 justify-center w-full">
+        <div className="p-2 rounded-xl flex items-center justify-center">
           <AlertText variant={expression} />
         </div>
       </div>
-      <div className="grid w-full bg-gray-900 max-w-sm items-center">
-        <TabsItem />
-      </div>
+      <TabsItem />
     </main>
   );
 }

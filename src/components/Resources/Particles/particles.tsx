@@ -7,6 +7,7 @@ import { loadSlim } from "@tsparticles/slim";
 const ParticlesComponent = (props: any) => {
 
   const [init, setInit] = useState(false);
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -15,11 +16,12 @@ const ParticlesComponent = (props: any) => {
     });
   }, []);
 
-  const particlesLoaded = (container: any) => {
-    console.log(container);
-  };
-
-
+  interface IMoveDirection {
+    direction: "none" | "top" | "bottom" | "left" | "right" | "topLeft" | "topRight" | "bottomRight" | "bottomLeft" | "outside" | "inside";
+  }
+  interface IOutModes {
+    default: "bounce" | "split" | "destroy" | "out"; // Allowed options
+  }
   const options = useMemo(
     () => ({
       background: {
@@ -61,10 +63,10 @@ const ParticlesComponent = (props: any) => {
           width: 1,
         },
         move: {
-          direction: "none",
+          direction: "none" as IMoveDirection["direction"],
           enable: true,
           outModes: {
-            default: "bounce",
+            default: "bounce" as IOutModes['default'],
           },
           random: true,
           speed: 1,
@@ -91,8 +93,7 @@ const ParticlesComponent = (props: any) => {
     [],
   );
 
-
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+  return <Particles id={props.id} options={options} />;
 };
 
 export default ParticlesComponent;

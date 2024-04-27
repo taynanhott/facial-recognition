@@ -1,14 +1,14 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { AlertText, Alerta } from "../Alert";
 
-const classCard = 'min-h-[638.5px]';
+const classCard = 'min-h-[357px]';
 
 export default function TabsItem() {
     return (
-        <Tabs defaultValue="humor" className="min-w-full">
+        <Tabs defaultValue="humor" className="p-2 w-full min-h-[420px] bg-gray-900 lg:max-w-sm items-center">
             <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="humor">Verifica Humor</TabsTrigger>
                 <TabsTrigger value="foto">Valida Foto</TabsTrigger>
@@ -24,6 +24,7 @@ export default function TabsItem() {
                     <CardContent className="space-y-2">
                         <div className="space-y-1">
                             <Label htmlFor="current">Expressão facial reconhecida</Label>
+                            <Alerta variant={'success'} />
                         </div>
                     </CardContent>
                 </Card>
@@ -43,6 +44,7 @@ export default function TabsItem() {
                         </div>
                         <div className="space-y-1">
                             <Label htmlFor="current">Rosto reconhecido é igual ao da foto anexada?</Label>
+                            <Alerta variant={'success'} />
                         </div>
                     </CardContent>
                 </Card>
