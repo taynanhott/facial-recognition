@@ -7,7 +7,7 @@ export function Head() {
             <div>
                 <div className="flex items-center">
                     <a
-                        href="/home"
+                        href="https://portfolio-taynanzh.vercel.app/home"
                         target="_self"
                     >
                         <p className="font-bold text-white mr-4 text-xl lg:text-2xl ml-4">Portfólio</p>
