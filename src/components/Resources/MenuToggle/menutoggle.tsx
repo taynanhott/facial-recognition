@@ -67,14 +67,6 @@ interface Props {
     key: number
 }
 
-const pages = [
-    {
-        index: 0,
-        name: 'Dashboard',
-        href: 'https://taynan.dev/home'
-    },
-];
-
 const components = [
     {
         index: 0,

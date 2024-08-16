@@ -25,7 +25,7 @@ const sidebar = {
   }
 };
 
-function Menu({ toggle }) {
+function Menu({ toggle }: any) {
 
   let isHidden = toggle ? `` : `hidden`;
 
