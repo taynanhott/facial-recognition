@@ -10,6 +10,7 @@ function App() {
   const [expression, setExpression] = useState('' as string);
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [cam, setCam] = useState(false);
 
   useEffect(() => {
     navigator.mediaDevices
@@ -18,9 +19,11 @@ function App() {
         const videoEl = videoRef.current;
         if (videoEl) {
           videoEl.srcObject = stream;
+          setCam(true);
         }
       })
       .catch(err => {
+        setCam(false);
         console.error("error:", err);
       });
   }, []);
@@ -36,7 +39,7 @@ function App() {
   async function handleLoadedMetadata() {
     const videoEl = videoRef.current as HTMLVideoElement;
     const canvasEl = canvasRef.current as HTMLCanvasElement;
-
+    debugger
     if (!videoEl || !canvasEl) {
       return;
     }
@@ -78,8 +81,12 @@ function App() {
     <main className="z-10 flex flex-col lg:flex-row justify-center min-h-[345px] lg:min-h-[564px] lg:justify-between h-full lg:max-w-6xl items-center container">
       <div className="bg-gray-900 min-h-[345px] lg:min-h-[564px] w-full">
         <div className="relative flex items-center justify-center aspect-video">
-          <video ref={videoRef} onLoadedMetadata={handleLoadedMetadata} autoPlay />
-          <canvas ref={canvasRef} className="absolute" />
+          {cam ? <div>
+            <video ref={videoRef} onLoadedMetadata={handleLoadedMetadata} autoPlay />
+            <canvas ref={canvasRef} className="absolute" />
+          </div> :
+            <div className='text-white'>Nenhuma câmera encontrada</div>
+          }
         </div>
         <div className="p-2 rounded-xl flex items-center justify-center">
           <AlertText variant={expression} />

@@ -8,6 +8,7 @@ import { Footer } from "@/components/Html/Footer/footer";
 import dynamic from 'next/dynamic';
 import { ReactNode } from "react";
 import ParticlesComponent from "@/components/Resources/Particles/particles";
+import MenuToggle from "@/components/Resources/MenuToggle/button";
 
 const DynamicMouseCircle = dynamic(() => import('@/components/Resources/MouseCircle/mouse'), { ssr: false });
 
@@ -22,25 +23,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head>
-        </head>
-        <body>
-          <DynamicMouseCircle />
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <ParticlesComponent id="particles" className="z-0 opacity-5" />
-            <Head />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+      </head>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <MenuToggle />
+          <Head />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }
