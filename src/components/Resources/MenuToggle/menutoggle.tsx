@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from 'next/image';
 import Link from "next/link";
 
-const Path = props => (
+const Path = (props: React.SVGProps<SVGPathElement>) => (
     <motion.path
         fill="transparent"
         strokeWidth="3"
