@@ -6,7 +6,7 @@ export default {
             {
                 source: '/',
                 destination: '/reconhecimento',
-                permanent: false, // Define se o redirecionamento é permanente ou temporário
+                permanent: false,
             },
         ];
     },
