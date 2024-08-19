@@ -19,6 +19,11 @@ export function AlertText(props: { variant: string }) {
             title = 'Falha no Reconhecimento!';
             text = 'Posicione corretamente e se afaste da câmera.';
             break;
+        case 'fail':
+            color = 'text-rose-500'
+            title = 'Equipamento inválido!';
+            text = 'O reconhecimento não poderá ser realizado.';
+            break;
         default:
             color = 'text-yellow-400'
             title = 'Carregando...';
